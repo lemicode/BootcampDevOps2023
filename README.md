@@ -1,4 +1,4 @@
-# Repositorio de Tareas del Bootcamp de DevOps 2023 :rocket:
+# Bootcamp DevOps 2023 :rocket: :artificial_satellite:
 
 Este repositorio está destinado a almacenar la solución a las tareas que me son asignadas durante el Bootcamp de DevOps que estoy cursando.
 
@@ -6,9 +6,9 @@ Este repositorio está destinado a almacenar la solución a las tareas que me so
 
 El repositorio está organizado de la siguiente manera:
 
-- **Desafío 1**
-- **Desafío 2**
-- **Desafío 3**
+- **Solución Desafío 1**
+- **Solución Desafío 2**
+- **Solución Desafío 3**
 
 ## ¿Qué es DevOps?
 
