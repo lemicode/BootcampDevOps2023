@@ -10,7 +10,7 @@ El repositorio está organizado de la siguiente manera:
 - [Solución Desafío 2](https://github.com/BambooThink/BootcampDevOps2023/blob/fb1c5bf4729cbc3501b452dbef4b4bb7ef58aa1a/Soluci%C3%B3n%20Desaf%C3%ADo%20DevOps%20No.%202%20%20-%20Marco%20Vanegas.pdf)
 - [Solución Desafío 3](https://github.com/BambooThink/BootcampDevOps2023/blob/fb1c5bf4729cbc3501b452dbef4b4bb7ef58aa1a/Soluci%C3%B3n%20Desafio%203%20-%20Marco%20Vanegas.pdf)
 
-**Nota:** es importante dar clic al final de la página en el botón *More Pages* para ver el documento completo.
+**Nota:** es importante dar clic al final de la página en el botón __More Pages__ para ver el documento completo.
 
 ## ¿Qué es DevOps?
 
