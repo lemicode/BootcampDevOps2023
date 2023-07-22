@@ -4,7 +4,7 @@
 
 ### Estructura de directorios
 
-DESAFÍO_OPCIONAL_1_ANSIBLE/
+SOLUCIÓN_DESAFíO_OPCIONAL_1/
 ├── config/
 │   ├── node_exporter.service.j2
 │   ├── prometheus.yml.j2
