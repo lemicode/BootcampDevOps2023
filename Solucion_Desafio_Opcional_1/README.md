@@ -20,7 +20,7 @@ SOLUCIÓN_DESAFíO_OPCIONAL_1/
 
 ```
 
-#### config/
+#### [config/]
 
 Contiene los archivos de configuración de los servicios a instalar.
 
@@ -28,7 +28,7 @@ Contiene los archivos de configuración de los servicios a instalar.
 - prometheus.yml.j2: Archivo de configuración de prometheus.
 - prometheus.service.j2: Archivo de configuración del servicio prometheus.
 
-#### packages/
+#### [packages/]
 
 Contiene los archivos de instalación de los servicios a instalar.
 
@@ -37,10 +37,10 @@ Contiene los archivos de instalación de los servicios a instalar.
 - node_exporter.yml: Archivo de instalación de node_exporter.
 - prometheus.yml: Archivo de instalación de prometheus.
 
-#### inventory.ini
+#### [inventory.ini]
 
 Contiene la información de los hosts a configurar.
 
-#### main.yml
+#### [main.yml]
 
 Contiene las tareas a ejecutar.
