@@ -1,0 +1,120 @@
+- name: Create prometheus user without home directory
+  user:
+    name: prometheus
+    shell: /bin/false
+    home: /home/prometheus
+    system: yes
+    createhome: no
+  tags: [Create prometheus user without home directory]
+
+- name: Create directories for prometheus
+  file:
+    path: "{{ item }}"
+    state: directory
+    owner: prometheus
+    group: prometheus
+    mode: 0755
+  with_items:
+    - /etc/prometheus
+    - /var/lib/prometheus
+
+- name: Download prometheus
+  get_url:
+    url: https://github.com/prometheus/prometheus/releases/download/v2.45.0/prometheus-2.45.0.linux-amd64.tar.gz
+    dest: /tmp/prometheus-2.45.0.linux-amd64.tar.gz
+    mode: 0755
+    owner: prometheus
+    group: prometheus
+  tags: [Download prometheus]
+
+- name: sha256sum prometheus-2.45.0.linux-amd64.tar.gz
+  shell: sha256sum /tmp/prometheus-2.45.0.linux-amd64.tar.gz
+  tags: [sha256sum prometheus-2.45.0.linux-amd64.tar.gz]
+
+- name: Extract prometheus
+  unarchive:
+    src: /tmp/prometheus-2.45.0.linux-amd64.tar.gz
+    dest: /tmp
+    remote_src: yes
+    owner: prometheus
+    group: prometheus
+  tags: [Extract prometheus]
+
+- name: Copy prometheus files
+  copy:
+    src: /tmp/prometheus-2.45.0.linux-amd64/prometheus
+    dest: /usr/local/bin
+    owner: prometheus
+    group: prometheus
+    mode: 0755
+  tags: [Copy prometheus files]
+
+- name: Copy promtool files
+  copy:
+    src: /tmp/prometheus-2.45.0.linux-amd64/promtool
+    dest: /usr/local/bin
+    owner: prometheus
+    group: prometheus
+    mode: 0755
+  tags: [Copy promtool files]
+
+- name: Copy consoles files
+  copy:
+    src: /tmp/prometheus-2.45.0.linux-amd64/consoles
+    dest: /etc/prometheus
+    owner: prometheus
+    group: prometheus
+    mode: 0755
+  tags: [Copy consoles files]
+
+- name: Copy console_libraries files
+  copy:
+    src: /tmp/prometheus-2.45.0.linux-amd64/console_libraries
+    dest: /etc/prometheus
+    owner: prometheus
+    group: prometheus
+    mode: 0755
+  tags: [Copy console_libraries files]
+
+- name: Copy prometheus.yml files
+  copy:
+    src: /tmp/prometheus-2.45.0.linux-amd64/prometheus.yml
+    dest: /etc/prometheus
+    owner: prometheus
+    group: prometheus
+    mode: 0755
+  tags: [Copy prometheus.yml files]
+
+- name: Create file /etc/systemd/system/prometheus.service
+  file:
+    path: /etc/systemd/system/prometheus.service
+    state: touch
+    owner: root
+    group: root
+    mode: 0660
+  tags: [Create file /etc/systemd/system/prometheus.service]
+
+- name: Copy content of prometheus.service.j2 template
+  template:
+    src: config/prometheus.service.j2
+    dest: /etc/systemd/system/prometheus.service
+    mode: 0644
+  tags: [Copy content of prometheus.service.j2 template]
+
+- name: Daemon is restarted
+  systemd:
+    daemon_reload: yes
+  tags: [Daemon is restarted]
+
+- name: Prometheus is started
+  systemd:
+    name: prometheus
+    state: started
+    enabled: yes
+  tags: [Prometheus is started]
+
+- name: Prometheus is enabled
+  systemd:
+    name: prometheus
+    enabled: yes
+  tags: [Prometheus is enabled]

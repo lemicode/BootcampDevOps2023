@@ -1,0 +1,100 @@
+- name: Create node_exporter user without home directory
+  user:
+    name: node_exporter
+    shell: /bin/false
+    home: /home/node_exporter
+    system: yes
+    createhome: no
+  tags: [Create node_exporter user without home directory]
+
+- name: Download node exporter
+  get_url:
+    url: https://github.com/prometheus/node_exporter/releases/download/v1.6.1/node_exporter-1.6.1.linux-amd64.tar.gz
+    dest: /tmp/node_exporter-1.6.1.linux-amd64.tar.gz
+    mode: 0755
+    owner: node_exporter
+    group: node_exporter
+  tags: [Download node exporter]
+
+- name: sha256sum node_exporter-1.6.1.linux-amd64.tar.gz
+  shell: sha256sum /tmp/node_exporter-1.6.1.linux-amd64.tar.gz
+  tags: [sha256sum node_exporter-1.6.1.linux-amd64.tar.gz]
+
+- name: Extract node exporter
+  unarchive:
+    src: /tmp/node_exporter-1.6.1.linux-amd64.tar.gz
+    dest: /tmp
+    remote_src: yes
+    owner: node_exporter
+    group: node_exporter
+    mode: 0755
+  tags: [Extract node exporter]
+
+- name: Copy node exporter files
+  copy:
+    src: /tmp/node_exporter-1.6.1.linux-amd64.tar.gz
+    dest: /usr/local/bin
+  tags: [Copy node exporter files]
+
+- name: Create file /etc/systemd/system/node_exporter.service
+  file:
+    path: /etc/systemd/system/node_exporter.service
+    state: touch
+    owner: root
+    group: root
+    mode: 0660
+  tags: [Create file /etc/systemd/system/node_exporter.service]
+
+- name: Copy content of node_exporter.service.j2 template
+  template:
+    src: config/node_exporter.service.j2
+    dest: /etc/systemd/system/node_exporter.service
+    mode: 0644
+  tags: [Copy content of node_exporter.service.j2 template]
+
+- name: Daemon is restarted
+  systemd:
+    daemon_reload: yes
+  tags: [Daemon is restarted]
+
+- name: node exporter is started
+  systemd:
+    name: node_exporter
+    state: started
+    enabled: yes
+  tags: [node exporter is started]
+
+- name: The node exporter status is validated
+  shell: systemctl status node_exporter
+  tags: [The node exporter status is validated]
+
+- name: node exporte is enabled
+  systemd:
+    name: node_exporte
+    enabled: yes
+  tags: [node exporte is enabled]
+
+# Configure prometheus with the exporter.  
+
+- name: Create file /etc/prometheus/prometheus.yml
+  file:
+    path: /etc/prometheus/prometheus.yml
+    state: touch
+    owner: node_exporter
+    group: node_exporter
+    mode: 0755
+  tags: [Create file /etc/prometheus/prometheus.yml]
+
+- name: Copy content of prometheus_node_exporter.service.j2 template
+  template:
+    src: config/prometheus_node_exporter.service.j2
+    dest: /etc/prometheus/prometheus.yml
+  tags: [Copy content of prometheus_node_exporter.service.j2 template]
+
+- name: The prometheus is restarted
+  shell: sudo systemctl restart prometheus
+  tags: [The prometheus is restarted]
+
+- name: The prometheus status is validated
+  shell: sudo systemctl status prometheus
+  tags: [The prometheus status is validated]

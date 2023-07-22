@@ -1,0 +1,44 @@
+- name: Download jenkins key
+  get_url:
+    url: https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+    dest: /usr/share/keyrings/jenkins-keyring.asc
+    mode: 0755
+    owner: www-data
+    group: www-data
+  tags: [Download jenkins key]
+
+- name: Add stable version jenkins repository
+  apt_repository:
+    repo: deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/
+    state: present
+    filename: jenkins.list
+  tags: [Add stable version jenkins repository]
+
+- name: Updates the list of available packages
+  apt:
+    update_cache: yes
+  tags: [Updates the list of available packages]
+
+- name: Install jenkins
+  apt:
+    name: jenkins
+    state: present
+  tags: [Install jenkins]
+
+- name: Start command to operate jenkins service
+  command: service jenkins start
+  tags: [Start command to operate jenkins service]
+
+- name: Jenkins status is validated
+  command: service jenkins status
+  tags: [Jenkins status is validated]
+
+- name: The content of the initialAdminPassword file is printed on the screen
+  shell: sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+  tags: [The content of the initialAdminPassword file is printed on the screen]
+
+- name: Install openjdk-17-jre
+  apt:
+    name: openjdk-17-jre
+    state: present
+  tags: [Install openjdk-17-jre]

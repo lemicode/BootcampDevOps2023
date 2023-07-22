@@ -1,0 +1,46 @@
+- name: Download grafana key
+  get_url:
+    url: https://apt.grafana.com/gpg.key
+    dest: /usr/share/keyrings/grafana.key
+    mode: 0755
+    owner: www-data
+    group: www-data
+  tags: [Download grafana key]
+
+- name: Add stable version grafana repository
+  apt_repository:
+    repo: deb [signed-by=/usr/share/keyrings/grafana.key] https://packages.grafana.com/oss/deb stable main
+    state: present
+    filename: grafana.list
+  tags: [Add stable version grafana repository]
+
+- name: Updates the list of available packages
+  apt:
+    update_cache: yes
+  tags: [Updates the list of available packages]
+
+- name: Start command to operate grafana service
+  command: service grafana-server start
+  tags: [Start command to operate grafana service]
+
+- name: Status command to operate grafana service
+  command: service grafana-server status
+  tags: [status command to operate grafana service]
+
+- name: Enable grafana server
+  service:
+    name: grafana-server
+    enabled: yes
+  tags: [Enable grafana server]
+
+- name: Stop grafana server
+  service:
+    name: grafana-server
+    state: stopped
+  tags: [Stop grafana server]
+
+- name: Restart grafana server
+  service:
+    name: grafana-server
+    state: restarted
+  tags: [Restart grafana server]
