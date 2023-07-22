@@ -2,6 +2,7 @@
   hosts: debian
   become: true
   tasks:
+  
     - name: repository configuration
       apt:
         name: "{{ item }}"
@@ -9,28 +10,35 @@
       with_items:
         - apt-transport-https
         - software-properties-common
+    
     - name: install grafana
       become: yes
       ansible.builtin.import_tasks: packages/grafana.yml
       tags: [install grafana]
+    
     - name: install prometheus
       become: yes
       ansible.builtin.import_tasks: packages/prometheus.yml
       tags: [install prometheus]
+    
     - name: install node_exporter
       become: yes
       ansible.builtin.import_tasks: packages/node_exporter.yml
       tags: [install node_exporter]
+    
     - name: install jenkins
       become: yes
       ansible.builtin.import_tasks: packages/jenkins.yml
       tags: [install jenkins]
+
       #load test apache benchmark
+    
     - name: Install apache2-utils
       apt:
         name: apache2-utils
         state: present
       tags: [Install apache2-utils]
+    
     - name: A stress test is performed
       shell: ab -n 1000 -c 100 http://wordpress.educacionit.local
       tags: [A stress test is performed]

@@ -18,6 +18,7 @@ SOLUCIÓN_DESAFíO_OPCIONAL_1/
 │   └── prometheus.yml
 ├── inventory.ini
 ├── main.yml
+└── README.md
 
 ```
 
