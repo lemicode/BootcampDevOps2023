@@ -1,9 +1,10 @@
-# Desafío Opcional No 1
+# Solución Desafío Opcional No. 1
 
 ## Instalación de Grafana, Prometheus, Node Exporter, Jenkins mediante Ansible
 
 ### Estructura de directorios
 
+``` Markdown
 SOLUCIÓN_DESAFíO_OPCIONAL_1/
 ├── config/
 │   ├── node_exporter.service.j2
@@ -16,6 +17,8 @@ SOLUCIÓN_DESAFíO_OPCIONAL_1/
 │   └── prometheus.yml
 ├── inventory.ini
 ├── main.yml
+
+```
 
 #### config/
 
