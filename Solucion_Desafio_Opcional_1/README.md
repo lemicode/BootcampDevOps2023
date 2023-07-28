@@ -1,6 +1,6 @@
 # Solución Desafío Opcional No. 1
 
-## Instalación de Grafana, Prometheus, Node Exporter, Jenkins mediante Ansible
+## Instalación de Grafana, Prometheus, Prometheus Node Exporter mediante Ansible
 
 ### Estructura de directorios
 
