@@ -1,6 +1,6 @@
 # Solución Desafío Opcional No. 1
 
-## Instalación de Grafana, Prometheus, Prometheus Node Exporter mediante Ansible
+## Instalación de Grafana, Prometheus y Prometheus Node Exporter mediante Ansible
 
 ### Estructura de directorios
 
@@ -17,7 +17,7 @@ SOLUCIÓN_DESAFíO_OPCIONAL_1/
 │   └── prometheus.yml
 ├── inventory.ini
 ├── main.yml
-├── Solución Desafio Opcional 1 - Marco Vanegas.pdf
+├── [Solución Desafio Opcional 1 - Marco Vanegas.pdf] (Solución Desafio Opcional 1 - Marco Vanegas.pdf)
 └── README.md
 
 ```
