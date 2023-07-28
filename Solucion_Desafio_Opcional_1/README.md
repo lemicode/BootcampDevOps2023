@@ -24,15 +24,15 @@ SOLUCIÓN_DESAFíO_OPCIONAL_1/
 
 - #### Solución_Desafio_Opcional_1_-_Marco_Vanegas.pdf
 
-Este [archivo](Solución_Desafio_Opcional_1_-_Marco_Vanegas.pdf) Contiene la documentación de la solución.
+    Este [archivo](Solución_Desafio_Opcional_1_-_Marco_Vanegas.pdf) Contiene la documentación de la solución.
 
 - #### config/
 
-Contiene los archivos de configuración de los servicios a instalar.
+    Contiene los archivos de configuración de los servicios a instalar.
 
-- node_exporter.service.j2: Archivo de configuración del servicio node_exporter.
-- prometheus.yml.j2: Archivo de configuración de prometheus.
-- prometheus.service.j2: Archivo de configuración del servicio prometheus.
+    - node_exporter.service.j2: Archivo de configuración del servicio node_exporter.
+    - prometheus.yml.j2: Archivo de configuración de prometheus.
+    - prometheus.service.j2: Archivo de configuración del servicio prometheus.
 
 - #### packages/
 
