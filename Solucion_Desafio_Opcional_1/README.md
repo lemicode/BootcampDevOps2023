@@ -17,17 +17,16 @@ SOLUCIÓN_DESAFíO_OPCIONAL_1/
 │   └── prometheus.yml
 ├── inventory.ini
 ├── main.yml
-├── Solución Desafio Opcional 1 - Marco Vanegas.pdf
+├── Solución_Desafio_Opcional_1_-_Marco_Vanegas.pdf
 └── README.md
 
 ```
 
-#### Solución Desafio Opcional 1 - Marco Vanegas.pdf
+#### Solución_Desafio_Opcional_1_-_Marco_Vanegas.pdf
 
-Este [archivo][Solución Desafio Opcional 1 - Marco Vanegas.pdf] Contiene la documentación de la solución.
+Este [archivo](Solución_Desafio_Opcional_1_-_Marco_Vanegas.pdf) Contiene la documentación de la solución.
 
 #### config/
-===
 
 Contiene los archivos de configuración de los servicios a instalar.
 
