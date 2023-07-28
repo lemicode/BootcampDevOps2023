@@ -36,16 +36,16 @@ SOLUCIÓN_DESAFíO_OPCIONAL_1/
 
 - #### packages/
 
-Contiene los archivos de instalación de los servicios a instalar.
+    Contiene los archivos de instalación de los servicios a instalar.
 
-- grafana.yml: Archivo de instalación de grafana.
-- node_exporter.yml: Archivo de instalación de node_exporter.
-- prometheus.yml: Archivo de instalación de prometheus.
+    - grafana.yml: Archivo de instalación de grafana.
+    - node_exporter.yml: Archivo de instalación de node_exporter.
+    - prometheus.yml: Archivo de instalación de prometheus.
 
 - #### inventory.ini
 
-Contiene la información de los hosts a configurar.
+    Contiene la información de los hosts a configurar.
 
 - #### main.yml
 
-Contiene las tareas a ejecutar.
+    Contiene las tareas a ejecutar.
