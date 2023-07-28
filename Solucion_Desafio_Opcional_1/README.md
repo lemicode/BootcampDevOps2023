@@ -13,11 +13,11 @@ SOLUCIÓN_DESAFíO_OPCIONAL_1/
 │   └── prometheus.service.j2
 ├── packages/
 │   ├── grafana.yml
-│   ├── jenkins.yml
 │   ├── node_exporter.yml
 │   └── prometheus.yml
 ├── inventory.ini
 ├── main.yml
+├── Solución Desafio Opcional 1 - Marco Vanegas.pdf
 └── README.md
 
 ```
@@ -35,7 +35,6 @@ Contiene los archivos de configuración de los servicios a instalar.
 Contiene los archivos de instalación de los servicios a instalar.
 
 - grafana.yml: Archivo de instalación de grafana.
-- jenkins.yml: Archivo de instalación de jenkins.
 - node_exporter.yml: Archivo de instalación de node_exporter.
 - prometheus.yml: Archivo de instalación de prometheus.
 
@@ -46,3 +45,7 @@ Contiene la información de los hosts a configurar.
 #### main.yml
 
 Contiene las tareas a ejecutar.
+
+#### Solución Desafio Opcional 1 - Marco Vanegas.pdf
+
+Contiene la documentación de la solución.

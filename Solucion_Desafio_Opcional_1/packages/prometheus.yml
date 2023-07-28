@@ -47,6 +47,7 @@
     owner: prometheus
     group: prometheus
     mode: 0755
+    remote_src: yes
   tags: [Copy prometheus files]
 
 - name: Copy promtool files
@@ -56,6 +57,7 @@
     owner: prometheus
     group: prometheus
     mode: 0755
+    remote_src: yes
   tags: [Copy promtool files]
 
 - name: Copy consoles files
@@ -65,6 +67,7 @@
     owner: prometheus
     group: prometheus
     mode: 0755
+    remote_src: yes
   tags: [Copy consoles files]
 
 - name: Copy console_libraries files
@@ -74,6 +77,7 @@
     owner: prometheus
     group: prometheus
     mode: 0755
+    remote_src: yes
   tags: [Copy console_libraries files]
 
 - name: Copy prometheus.yml files
@@ -83,6 +87,7 @@
     owner: prometheus
     group: prometheus
     mode: 0755
+    remote_src: yes
   tags: [Copy prometheus.yml files]
 
 - name: Create file /etc/systemd/system/prometheus.service
@@ -98,7 +103,6 @@
   template:
     src: config/prometheus.service.j2
     dest: /etc/systemd/system/prometheus.service
-    mode: 0644
   tags: [Copy content of prometheus.service.j2 template]
 
 - name: Daemon is restarted
@@ -110,7 +114,6 @@
   systemd:
     name: prometheus
     state: started
-    enabled: yes
   tags: [Prometheus is started]
 
 - name: Prometheus is enabled
@@ -118,3 +121,13 @@
     name: prometheus
     enabled: yes
   tags: [Prometheus is enabled]
+
+- name: Prometheus is reloaded
+  systemd:
+    name: prometheus
+    state: restarted
+  tags: [Prometheus is reloaded]
+
+- name: The prometheus status is validated
+  shell: systemctl status prometheus
+  tags: [The prometheus status is validated]

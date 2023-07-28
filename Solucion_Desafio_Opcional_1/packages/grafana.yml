@@ -11,7 +11,7 @@
   apt_repository:
     repo: deb [signed-by=/usr/share/keyrings/grafana.key] https://packages.grafana.com/oss/deb stable main
     state: present
-    filename: grafana.list
+    filename: grafana
   tags: [Add stable version grafana repository]
 
 - name: Updates the list of available packages
@@ -19,13 +19,17 @@
     update_cache: yes
   tags: [Updates the list of available packages]
 
-- name: Start command to operate grafana service
-  command: service grafana-server start
-  tags: [Start command to operate grafana service]
+- name: Install grafana
+  apt:
+    name: grafana
+    state: present
+  tags: [Install grafana]
 
-- name: Status command to operate grafana service
-  command: service grafana-server status
-  tags: [status command to operate grafana service]
+- name: Start grafana server
+  service:
+    name: grafana-server
+    state: started
+  tags: [Start grafana server]
 
 - name: Enable grafana server
   service:
@@ -33,14 +37,12 @@
     enabled: yes
   tags: [Enable grafana server]
 
-- name: Stop grafana server
-  service:
-    name: grafana-server
-    state: stopped
-  tags: [Stop grafana server]
-
 - name: Restart grafana server
   service:
     name: grafana-server
     state: restarted
   tags: [Restart grafana server]
+
+- name: The grafana status is validated
+  shell: systemctl status grafana-server
+  tags: [The grafana status is validated]
