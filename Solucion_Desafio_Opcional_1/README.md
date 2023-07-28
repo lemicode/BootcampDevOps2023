@@ -22,11 +22,12 @@ SOLUCIÓN_DESAFíO_OPCIONAL_1/
 
 ```
 
-#### [Solución Desafio Opcional 1 - Marco Vanegas.pdf] (Solución Desafio Opcional 1 - Marco Vanegas.pdf)
+[Solución Desafio Opcional 1 - Marco Vanegas.pdf] (Solución Desafio Opcional 1 - Marco Vanegas.pdf)
 
 Contiene la documentación de la solución.
 
 #### config/
+---
 
 Contiene los archivos de configuración de los servicios a instalar.
 
