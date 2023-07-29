@@ -1,5 +1,5 @@
-- name: Install Grafana, Prometheus, Node Exporter
-  hosts: debian
+- name: Install Grafana, Prometheus
+  hosts: ubuntu
   become: true
   tasks:
   
@@ -20,7 +20,12 @@
       become: yes
       ansible.builtin.import_tasks: packages/prometheus.yml
       tags: [install prometheus]
-    
+
+- name: Install Prometheus Node Exporter
+  hosts: debian
+  become: true
+  tasks:
+
     - name: install node_exporter
       become: yes
       ansible.builtin.import_tasks: packages/node_exporter.yml

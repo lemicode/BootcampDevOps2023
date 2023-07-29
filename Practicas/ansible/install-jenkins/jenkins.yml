@@ -1,0 +1,38 @@
+- name: Download jenkins key
+  get_url:
+    url: https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+    dest: /usr/share/keyrings/jenkins-keyring.asc
+    mode: 0755
+    owner: www-data
+    group: www-data
+  tags: [Download jenkins key]
+
+- name: Add stable version jenkins repository
+  apt_repository:
+    repo: deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/
+    state: present
+    filename: jenkins
+  tags: [Add stable version jenkins repository]
+
+- name: Updates the list of available packages
+  apt:
+    update_cache: yes
+  tags: [Updates the list of available packages]
+
+- name: Install openjdk-17-jre
+  apt:
+    name: openjdk-17-jre-headless
+    state: present
+  tags: [Install openjdk-17-jre]  
+
+- name: Install jenkins
+  apt:
+    name: jenkins
+    state: present
+  tags: [Install jenkins]
+
+- name: Start command to operate jenkins service
+  service:
+    name: jenkins
+    state: started
+  tags: [Start command to operate jenkins service]

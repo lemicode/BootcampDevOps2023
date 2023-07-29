@@ -1,0 +1,6 @@
+- name: Install Jenkins
+  hosts: ubuntu
+  become: yes
+  tasks:
+    - name: Jenkins Tasks        
+      ansible.builtin.import_tasks: jenkins.yml
