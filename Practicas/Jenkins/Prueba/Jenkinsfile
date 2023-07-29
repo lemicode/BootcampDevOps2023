@@ -6,5 +6,10 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/BambooThink/BootcampDevOps2023'
             }
         }
+        stage('Show a message') {
+            steps {
+                echo 'We are in the stage of showing a message'
+            }
+        }
     }
 }
