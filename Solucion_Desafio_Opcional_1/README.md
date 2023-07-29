@@ -24,7 +24,7 @@ SOLUCIÓN_DESAFíO_OPCIONAL_1/
 
 - #### Solución_Desafio_Opcional_1_-_Marco_Vanegas.pdf
 
-    Este [archivo](Solución_Desafio_Opcional_1_-_Marco_Vanegas.pdf) Contiene la documentación de la solución.
+    Este [archivo](Solución_Desafio_Opcional_1_-_Marco_Vanegas.pdf) contiene la documentación de la solución.
 
 - #### config/
 
