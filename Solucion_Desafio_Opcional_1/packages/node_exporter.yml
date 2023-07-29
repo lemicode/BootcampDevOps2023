@@ -74,22 +74,3 @@
     name: node_exporter
     enabled: yes
   tags: [node exporte is enabled]
-
-# Configure prometheus with the exporter.  
-
-- name: Add node_exporter configuration to /etc/prometheus/prometheus.yml file
-  blockinfile:
-    path: /etc/prometheus/prometheus.yml
-    block: "{{ lookup('file', 'config/prometheus_node_exporter.service.j2') }}"
-    create: no
-  tags: [Add node_exporter configuration to /etc/prometheus/prometheus.yml file]
-
-- name: The prometheus is restarted
-  service:
-    name: prometheus
-    state: restarted
-  tags: [The prometheus is restarted]
-
-- name: The prometheus status is validated
-  shell: systemctl status prometheus
-  tags: [The prometheus status is validated]
