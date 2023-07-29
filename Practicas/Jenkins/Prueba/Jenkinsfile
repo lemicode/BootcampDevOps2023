@@ -11,5 +11,10 @@ pipeline {
                 echo 'We are in the stage of showing a message'
             }
         }
+        stage('Ansible Test') {
+            steps{
+                sh 'ansible-playbook --check -i ./Practicas/ansible/install-jenkins/inventory.ini ./Practicas/ansible/install-jenkins/playbook.yml'
+            }
+        }
     }
 }
