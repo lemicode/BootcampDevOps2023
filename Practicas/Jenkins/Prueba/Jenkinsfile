@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('SCM checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/BambooThink/BootcampDevOps2023'
+                git branch: 'main', url: 'https://github.com/BambooThink/BootcampDevOps2023'
             }
         }
     }
