@@ -14,4 +14,4 @@ Este repositorio contiene la configuración de Terraform para provisionar una in
 
 ## PDF donde se documenta el proceso de provisionamiento de una máquina virtual Windows en AWS
 
-[Solución Desafio 5 - Marco Vanegas.pdf](Solucion_Desafio_5/Solución_Desafio_5_-_Marco_Vanegas.pdf)
+[Solución Desafio 5 - Marco Vanegas.pdf](Solución_Desafio_5_-_Marco_Vanegas.pdf)
