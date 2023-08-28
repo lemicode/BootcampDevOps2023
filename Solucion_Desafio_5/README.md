@@ -1,4 +1,4 @@
-# Provisionamiento de Máquina Virtual Windows en AWS con Terraform
+# Aprovisionamiento de Máquina Virtual Windows en AWS con Terraform
 
 Este repositorio contiene la configuración de Terraform para provisionar una instancia EC2 con Windows en AWS.
 

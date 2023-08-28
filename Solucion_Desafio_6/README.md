@@ -1,4 +1,4 @@
-# Provisionamiento de un balanceador de carga que permita la distribución de tráfico entre dos instancias EC2
+# Aprovisionamiento de un balanceador de carga que permita la distribución de tráfico entre dos instancias EC2
 
 ## Objetivos
 
