@@ -46,8 +46,7 @@ resource "aws_security_group" "server_linux_rdp_sg" {
 # Create Two Resources - Instance
 resource "aws_instance" "linux_server_ins" {
   count = 2
-  # ami => Amazon Linux 2023 AMI 2023.1.20230825.0 x86_64 HVM kernel-6.1
-  ami                         = "ami-053b0d53c279acc90"
+  ami                         = "ami-053b0d53c279acc90" # Ubuntu
   instance_type               = "t2.micro"
   subnet_id                   = module.vpc.public_subnets[count.index] # Public Subnet *important*
   key_name                    = "devops"
