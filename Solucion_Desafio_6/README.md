@@ -8,7 +8,7 @@
 4. Agregar estas instancias a un target group.
 5. Crear el balanceador de carga y agregar el target group al balanceador.
 
-## Pasos para el provisionamiento
+## Pasos para el aprovisionamiento
 
 1. Ejecutar `terraform init` para inicializar el directorio con Terraform.
 2. Ejecutar `terraform plan --out terraform.plan` para ver los recursos que se crearán.
@@ -18,6 +18,6 @@
 
 [terraform.plan](terraform.plan).
 
-## PDF donde se documenta el proceso de provisionamiento
+## PDF donde se documenta el proceso de aprovisionamiento
 
 [Solución Desafio 6 - Marco Vanegas.pdf](Solución_Desafio_6_-_Marco_Vanegas.pdf).
