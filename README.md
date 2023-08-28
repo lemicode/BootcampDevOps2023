@@ -13,7 +13,7 @@ El repositorio está organizado de la siguiente manera:
 - [Solución Desafío 4](https://github.com/BambooThink/BootcampDevOps2023/blob/cccc100cb1dc4f96fa22a9b8451dab585a0acfa2/Soluci%C3%B3n%20Desafio%204%20-%20Marco%20Vanegas.pdf)
 - [Solución Desafío Opcional 1](Solucion_Desafio_Opcional_1/)
 - [Solución Desafío 5](Solucion_Desafio_5/)
-- [Solución Desafío 5](Solucion_Desafio_6/)
+- [Solución Desafío 6](Solucion_Desafio_6/)
 
 **Nota:** es importante dar clic al final de la página en el botón __More Pages__ para ver el documento completo.
 
