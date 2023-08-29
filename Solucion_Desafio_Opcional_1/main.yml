@@ -3,7 +3,7 @@
   become: true
   tasks:
   
-    - name: repository configuration
+    - name: Repository Configuration
       apt:
         name:
           - apt-transport-https
@@ -11,12 +11,12 @@
         state: present
         autoclean: yes
 
-    - name: install grafana
+    - name: Install Grafana
       become: yes
       ansible.builtin.import_tasks: packages/grafana.yml
       tags: [install grafana]
     
-    - name: install prometheus
+    - name: Install Prometheus
       become: yes
       ansible.builtin.import_tasks: packages/prometheus.yml
       tags: [install prometheus]
@@ -26,7 +26,7 @@
   become: true
   tasks:
 
-    - name: install node_exporter
+    - name: Install node_exporter
       become: yes
       ansible.builtin.import_tasks: packages/node_exporter.yml
       tags: [install node_exporter]
