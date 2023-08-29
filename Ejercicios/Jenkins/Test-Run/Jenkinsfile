@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Ansible Test') {
             steps{
-                sh 'ansible-playbook --check -i Practicas/ansible/install-jenkins/inventory.ini Practicas/ansible/install-jenkins/playbook.yml'
+                sh 'ansible-playbook --check -i Ejercicios/Ansible/Jenkins-Installation/inventory.ini Ejercicios/Ansible/Jenkins-Installation/playbook.yml'
             }
         }
     }
