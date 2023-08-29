@@ -1,7 +1,5 @@
 # Instalación de Jenkins con Ansible
 
-## Ejecución
-
 ```bash
 ansible-playbook -i inventory.ini playbook.yml -u dev -K
 ```
@@ -12,7 +10,7 @@ ansible-playbook -i inventory.ini playbook.yml -u dev -K
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 
-# Pasos para reiniciar la clave del usuario principal de Jenkins
+## Pasos para reiniciar la clave del usuario principal de Jenkins
 
 1. Hacer backup del archivo /var/lib/jenkins/config.xml
 2. Ingresar al archivo /var/lib/jenkins/config.xml con privilegios sudo
