@@ -6,6 +6,7 @@ info:
 host: api-name.endpoints.prueba1-398921.cloud.goog
 schemes:
   - http
+  - https
 paths:
   /:
     get:
