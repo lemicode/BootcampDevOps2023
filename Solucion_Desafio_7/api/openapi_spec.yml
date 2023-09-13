@@ -1,0 +1,19 @@
+swagger: "2.0"
+info:
+  version: 1.0.0
+  title: API Express Swagger 2.0
+  description: Simple API with Express using Swagger 2.0
+host: api-name.endpoints.prueba-398920.cloud.goog
+schemes:
+  - http
+paths:
+  /:
+    get:
+      summary: Get greeting
+      description: Returns a greeting "Hello World!"
+      operationId: getGreeting
+      responses:
+        200:
+          description: Successful response
+          schema:
+            type: string

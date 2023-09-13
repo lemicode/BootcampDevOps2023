@@ -14,6 +14,7 @@ El repositorio está organizado de la siguiente manera:
 - [Solución Desafío Opcional 1](Solucion_Desafio_Opcional_1/)
 - [Solución Desafío 5](Solucion_Desafio_5/)
 - [Solución Desafío 6](Solucion_Desafio_6/)
+- [Solución Desafío 7](Solucion_Desafio_7/)
 
 **Nota:** es importante dar clic al final de la página en el botón __More Pages__ para ver el documento completo.
 
