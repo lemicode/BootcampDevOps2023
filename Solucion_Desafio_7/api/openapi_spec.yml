@@ -3,7 +3,7 @@ info:
   version: 1.0.0
   title: API Express Swagger 2.0
   description: Simple API with Express using Swagger 2.0
-host: api-name.endpoints.prueba1-398921.cloud.goog
+host: api-name.endpoints.prueba321-398923.cloud.goog
 schemes:
   - http
   - https
