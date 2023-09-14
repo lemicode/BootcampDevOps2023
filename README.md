@@ -6,7 +6,7 @@ Este repositorio está destinado a almacenar la solución a las tareas que me so
 
 El repositorio está organizado de la siguiente manera:
 
-- [Prácticas](Practicas/)
+- [Ejercicios](Ejercicios/)
 - [Solución Desafío 1](https://github.com/BambooThink/BootcampDevOps2023/blob/fb1c5bf4729cbc3501b452dbef4b4bb7ef58aa1a/Soluci%C3%B3n%20Desaf%C3%ADo%20DevOps%20No.%201%20-%20Marco%20Vanegas.pdf)
 - [Solución Desafío 2](https://github.com/BambooThink/BootcampDevOps2023/blob/fb1c5bf4729cbc3501b452dbef4b4bb7ef58aa1a/Soluci%C3%B3n%20Desaf%C3%ADo%20DevOps%20No.%202%20%20-%20Marco%20Vanegas.pdf)
 - [Solución Desafío 3](https://github.com/BambooThink/BootcampDevOps2023/blob/fb1c5bf4729cbc3501b452dbef4b4bb7ef58aa1a/Soluci%C3%B3n%20Desafio%203%20-%20Marco%20Vanegas.pdf)
