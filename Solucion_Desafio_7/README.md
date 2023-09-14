@@ -2,10 +2,8 @@
 
 En **Google Cloud Platform** crear una infraestructura como código que siga las directivas del siguiente diagrama:
 
-![Diagrama](images/diagram.png)
-
 <p align="center">
-    <img width="460" height="300" src="images/diagram.png">
+    <img width="550" src="images/diagram.png">
 </p>
 
 ## Pasos para el aprovisionamiento y despliegue
