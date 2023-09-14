@@ -8,7 +8,7 @@ En **Google Cloud Platform** crear una infraestructura como código que siga las
 
 ## Pasos para el aprovisionamiento y despliegue
 
-1. Ejecutar `gcloud init` para configurar gcloud.
+1. Ejecutar ```code gcloud init``` para configurar gcloud.
 1. Ejecutar `terraform init` para inicializar el directorio con Terraform.
 2. Ejecutar `terraform plan` para ver los recursos que se crearán.
 3. Ejecutar `terraform apply` para aplicar los cambios y provisionar la infraestructura.
