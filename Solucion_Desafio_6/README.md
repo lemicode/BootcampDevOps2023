@@ -12,7 +12,7 @@
 
 1. Ejecutar `terraform init` para inicializar el directorio con Terraform.
 2. Ejecutar `terraform plan --out terraform.plan` para ver los recursos que se crearán.
-3. Ejecutar `terraform apply` para aplicar los cambios y provisionar la infraestructura.
+3. Ejecutar `terraform apply` para aplicar los cambios y aprovisionar la infraestructura.
 
 ## Output del `terraform plan`
 

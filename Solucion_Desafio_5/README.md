@@ -1,12 +1,12 @@
 # Aprovisionamiento de Máquina Virtual Windows en AWS con Terraform
 
-Este repositorio contiene la configuración de Terraform para provisionar una instancia EC2 con Windows en AWS.
+Este repositorio contiene la configuración de Terraform para aprovisionar una instancia EC2 con Windows en AWS.
 
 ## Pasos para el aprovisionamiento
 
 1. Ejecutar `terraform init` para inicializar el directorio con Terraform.
 2. Ejecutar `terraform plan --out instance.plan` para ver los recursos que se crearán.
-3. Ejecutar `terraform apply` para aplicar los cambios y provisionar la infraestructura.
+3. Ejecutar `terraform apply` para aplicar los cambios y aprovisionar la infraestructura.
 
 ## Output del `terraform plan`
 
