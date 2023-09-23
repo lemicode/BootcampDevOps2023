@@ -5,7 +5,7 @@
 1. Se instala Docker y LocalStack en el equipo local.
 2. Se inicializa Docker (`systemctl --user start docker-desktop`) para levantar los servicios de LocalStack.
 
-![1.png][https://github.com/BambooThink/BootcampDevOps2023/blob/main/Ejercicios/Prueba_LocalStack/images/1.png?raw=true]
+![1.png][https://github.com/BambooThink/BootcampDevOps2023/blob/main/Ejercicios/Prueba_LocalStack/images/1.png]
 
 3. Se inicializa LocalStack `localstackt start`.
 
