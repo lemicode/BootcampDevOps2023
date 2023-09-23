@@ -16,7 +16,7 @@ El repositorio está organizado de la siguiente manera:
 - [Solución Desafío 6](Solucion_Desafio_6/)
 - [Solución Desafío 7](Solucion_Desafio_7/)
 
-**Nota:** En relación a los PDFs, es importante dar clic al final de las páginas en el botón __*More Pages*__ para continuar con la lectura de los documentos.
+**Nota:** En relación a los PDFs, es importante dar clic al final de las páginas en el botón __*More Pages*__ para continuar con la lectura del documento.
 
 ## ¿Qué es DevOps?
 

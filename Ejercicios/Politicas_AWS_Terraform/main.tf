@@ -1,15 +1,14 @@
-# Create a user
-resource "aws_iam_user" "user" {
-  name = "test-user"
+# Create a new IAM group
+module "iam_group" {
+  source = "./modules/iam_group"
 }
 
-resource "aws_iam_policy" "policy" {
-  name        = "test-policy"
-  description = "A test policy"
-  policy      = "{ ... policy JSON ... }"
+# Create a new IAM policy
+module "iam_policy" {
+  source = "./modules/iam_policy"
 }
 
-resource "aws_iam_user_policy_attachment" "test-attach" {
-  user       = aws_iam_user.user.name
-  policy_arn = aws_iam_policy.policy.arn
+# Create a new IAM user
+module "iam_user" {
+  source = "./modules/iam_user"
 }
