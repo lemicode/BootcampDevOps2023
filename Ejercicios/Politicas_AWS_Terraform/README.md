@@ -9,8 +9,9 @@ Se creó una estructura estándar para los ficheros de Terraform. No obstantes, 
 ## Pasos para el aprovisionamiento
 
 1. Ejecutar `terraform init` para inicializar el directorio con Terraform.
-2. Ejecutar `terraform validate` para validar la sintaxis de los archivos de Terraform.
+2. Ejecutar `terraform validate` para verificar que la configuración sea válida.
 3. Ejecutar `terraform plan` para ver los recursos que se crearán.
 4. Ejecutar `terraform apply` para aplicar los cambios y aprovisionar la infraestructura.
+5. Ejecutar `terraform show` para ver los recursos creados.
 5. Ejecutar `terraform refresh` para actualizar el archivo de estado de Terraform si se realiza alguna modificación directa en AWS mediante la consola.
 6. Ejecutar `terraform destroy` para deshacer todo el aprovisionamiento respectivamente.

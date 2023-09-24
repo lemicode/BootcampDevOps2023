@@ -28,6 +28,6 @@ resource "aws_iam_policy" "ec2_permissions_policy" {
 
 # Add the policy to the group
 resource "aws_iam_group_policy_attachment" "ec2_permissions_attachment" {
-  group      = aws_iam_group_ec2_full_access_group_name
+  group      = var.iam_group_name
   policy_arn = aws_iam_policy.ec2_permissions_policy.arn
 }

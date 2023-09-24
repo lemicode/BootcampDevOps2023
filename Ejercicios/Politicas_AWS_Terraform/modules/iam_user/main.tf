@@ -14,6 +14,6 @@ resource "aws_iam_user_group_membership" "ec2_user_membership" {
   user = aws_iam_user.ec2_user.name
 
   groups = [
-    aws_iam_group.ec2_full_access_group.name
+    var.iam_group_name
   ]
 }
