@@ -8,7 +8,7 @@
 
 #### 2.1 Se crea un archivo Dockerfile con el siguiente contenido:
 
-``` Dockerfile
+``` dockerfile
 FROM httpd:2.4
 COPY index.html /usr/local/apache2/htdocs/
 EXPOSE 80
@@ -36,20 +36,20 @@ EXPOSE 80
 
 ### 3. Se inicia sesión.
 
-``` Dockerfile
+``` bash
 docker login
 ```
 <img src="./images/3.png">
 
 ### 4. Se crea una imagen con el nombre de "apache".
 
-``` Dockerfile
+``` bash
 docker build -t apache:v1.0.0 .
 ```
 
 <img src="./images/4.png">
 
-``` Dockerfile
+``` bash
 docker scout quickview
 ```
 
@@ -57,7 +57,7 @@ docker scout quickview
 
 ### 5. Se crea un contenedor con el nombre de "apache" y se valida su funcionamiento.
 
-``` Dockerfile
+``` bash
 docker run -d -p 8080:80 --name apache apache:v1.0.0
 ```
 
@@ -69,7 +69,7 @@ docker run -d -p 8080:80 --name apache apache:v1.0.0
 
 ### 7. Se listan las imágenes creadas.
 
-``` Dockerfile
+``` bash
 docker images
 ```
 
@@ -77,7 +77,7 @@ docker images
 
 ### 8. Se listan los contenedores creados.
 
-``` Dockerfile
+``` bash
 docker ps -a
 ```
 
@@ -85,7 +85,7 @@ docker ps -a
 
 ### 9. Se detiene el contenedor.
 
-``` Dockerfile
+``` bash
 docker stop apache
 ```
 
@@ -93,7 +93,7 @@ docker stop apache
 
 ### 10. Se inicia nuevamente el contenedor.
 
-``` Dockerfile
+``` bash
 docker start apache
 ```
 
@@ -101,7 +101,7 @@ docker start apache
 
 ### 11. Se imprimen los logs del contenedor.
 
-``` Dockerfile
+``` bash
 docker logs apache
 ```
 
@@ -109,7 +109,7 @@ docker logs apache
 
 ### 12. Se ingresa al contenedor.
 
-``` Dockerfile
+``` bash
 docker exec -it apache bash
 ```
 
@@ -117,7 +117,7 @@ docker exec -it apache bash
 
 ### 13. Se detiene el contenedor y se elimina.
 
-``` Dockerfile 
+``` bash 
 docker stop apache
 docker rm apache
 ``` 
@@ -130,7 +130,7 @@ docker rm apache
 
 #### 14.1 Se etiqueta la imagen.
 
-``` Dockerfile 
+``` bash 
 docker tag apache:v1.0.0 <nombre_usuario_cuenta_hub.docker.com>/prueba:v1.0.0
 ``` 
 
@@ -138,7 +138,7 @@ docker tag apache:v1.0.0 <nombre_usuario_cuenta_hub.docker.com>/prueba:v1.0.0
 
 #### 14.2 Se sube la imagen.
 
-``` Dockerfile
+``` bash
 docker push <nombre_usuario_cuenta_hub.docker.com>/prueba:v1.0.0
 ```
 
@@ -150,7 +150,7 @@ docker push <nombre_usuario_cuenta_hub.docker.com>/prueba:v1.0.0
 
 ### 15. Se elimina la imagen creada.
 
-``` Dockerfile
+``` bash
 docker rmi apache:v1.0.0
 ```
 
@@ -158,7 +158,7 @@ docker rmi apache:v1.0.0
 
 ### 15.1 Se eliminan todas las imágenes.
 
-``` Dockerfile
+``` bash
 docker rmi $(docker images -q)
 ```
 
@@ -166,7 +166,7 @@ docker rmi $(docker images -q)
 
 ### 16. Se crea un contenedor con la imagen que se subió al respositorio de hub.docker.com.
 
-``` Dockerfile
+``` bash
 docker run -d -p 8080:80 --name apache <nombre_usuario_cuenta_hub.docker.com>/prueba:v1.0.0
 ```
 
@@ -176,7 +176,7 @@ docker run -d -p 8080:80 --name apache <nombre_usuario_cuenta_hub.docker.com>/pr
 
 #### 16.1 Se eliminan todos los contenedores junto con todas las imágenes.
 
-``` Dockerfile
+``` bash
 docker stop $(docker ps -q)
 docker rm $(docker ps -a -q)
 docker rmi $(docker images -q)
@@ -186,7 +186,7 @@ docker rmi $(docker images -q)
 
 ### 17. Se descarga la imagen subida al repositorio de hub.docker.com.
 
-``` Dockerfile
+``` bash
 docker pull <nombre_usuario_cuenta_hub.docker.com>/prueba:v1.0.0
 ```
 
