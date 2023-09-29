@@ -13,6 +13,9 @@ jobs:
     - name: Verificar código
       uses: actions/checkout@v2
 
+    - name: Configurar directorio de trabajo
+      run: cd Ejercicios/Prueba_GitHub_Actions/api-rest
+
     - name: Iniciar Docker
       run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
       # Asegúrate de configurar las variables de entorno DOCKER_USERNAME y DOCKER_PASSWORD en la configuración de tu repositorio.
