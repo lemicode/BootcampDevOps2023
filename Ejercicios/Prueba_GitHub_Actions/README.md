@@ -10,3 +10,8 @@ Para este ejercicio se construirá una imagen de Docker y luego se subirá al re
 
 <img src="./images/3.png">
 
+<img src="./images/4.png">
+
+<img src="./images/5.png">
+
+<img src="./images/6.png">
