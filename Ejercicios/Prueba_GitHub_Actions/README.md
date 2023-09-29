@@ -1,4 +1,4 @@
-# Ejercicio realizado en GitHub Actions.
+# Ejercicio en GitHub Actions
 
 Para este ejercicio se construirá una imagen de Docker y luego se subirá al repositorio creado en la registry de DockerHub.
 
@@ -12,7 +12,7 @@ Para este ejercicio se construirá una imagen de Docker y luego se subirá al re
 
 <img src="./images/2.png">
 
-### 3. Se configuran las variables para el login por lo cual deben ser de tipo _secret_.
+### 3. Se configuran las variables para el login, por lo cual deben ser de tipo _secret_.
 
 <img src="./images/3.png">
 
