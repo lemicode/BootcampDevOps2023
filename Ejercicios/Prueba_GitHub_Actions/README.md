@@ -1,8 +1,6 @@
 # Ejercicio en GitHub Actions
 
-Para este ejercicio se construirá una imagen de Docker y luego se subirá al repositorio creado en la registry de DockerHub.
-
-## Pasos a seguir
+Se construirá una imagen de Docker y luego se subirá al repositorio creado en la registry de DockerHub.
 
 ### 1. Se crea una Action, en este caso se selecciona _Docker image_.
 
