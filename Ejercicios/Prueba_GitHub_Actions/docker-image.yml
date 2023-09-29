@@ -21,7 +21,7 @@ jobs:
       # Asegúrate de configurar las variables de entorno DOCKER_USERNAME y DOCKER_PASSWORD en la configuración de tu repositorio.
 
     - name: Construir imagen de Docker
-      run: docker build -t orpimel/prueba:v2.0.0 .
+      run: docker build -t orpimel/prueba:v2.0.0 -f Ejercicios/Prueba_GitHub_Actions/api-rest/Dockerfile .
 
     - name: Subir imagen a Docker Hub
       run: docker push orpimel/prueba:v2.0.0
