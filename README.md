@@ -15,6 +15,7 @@ El repositorio está organizado de la siguiente manera:
 - [Solución Desafío 5](Solucion_Desafio_5/)
 - [Solución Desafío 6](Solucion_Desafio_6/)
 - [Solución Desafío 7](Solucion_Desafio_7/)
+- [Solución Desafío 8](Solucion_Desafio_8/)
 
 **Nota:** En relación a los PDFs, es importante dar clic al final de las páginas en el botón __*More Pages*__ para continuar con la lectura del documento.
 
