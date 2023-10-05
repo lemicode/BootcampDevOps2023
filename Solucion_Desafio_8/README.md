@@ -40,7 +40,7 @@
 
 11. Por último, se valida el funcionamiento del volumen mediante la creación de cualquier archivo en el host anfitrión en la ruta _$HOME/Desktop/host_volume_, luego se verifica que el archivo se encuentre en el contenedor de nombre _my_app_ en la ruta /home/app/volume.
 
-- Comando para acceder al contenedor: `docker exec -it my_app bash`.
+    - Comando para acceder al contenedor: `docker exec -it my_app bash`.
 
 __Nota:__ En el caso de tener inconvenientes donde el sistema mencione algo relacionado con las credenciales, se puede solucionar ejecutando `rm ~/.docker/config.json` para eliminar el archivo config.json, y luego se vuelve a iniciar sesión con `docker login`. Por otra parte, también es posible validar que todo marcha bien con la app antes de construir la imagen de Docker mediante la ejecución en local del comando `node index.js` (index.js se encuentra ubicado en el directorio *docker_image*) posterior a la instalación de las dependencias `npm install`.
 
