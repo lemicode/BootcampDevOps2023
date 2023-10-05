@@ -1,0 +1,32 @@
+name: Construir y subir la imagen de la Solución del Desafío 8
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Verificar código
+      uses: actions/checkout@v2
+
+    - name: Configurar Docker Buildx
+      uses: docker/setup-buildx-action@v1
+
+    - name: Login to DockerHub
+      uses: docker/login-action@v1 
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+
+    - name: Build and push
+      uses: docker/build-push-action@v2
+      with:
+        context: ${{ github.workspace }}/Solucion_Desafio_8/docker_image
+        file: ${{ github.workspace }}/Solucion_Desafio_8/docker_image/Dockerfile
+        push: true
+        tags: orpimel/desafio_8:v1.0.0
