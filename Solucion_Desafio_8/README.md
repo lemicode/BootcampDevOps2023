@@ -60,3 +60,19 @@ __Nota:__ el archivo docker-compose.yml se encuentra ubicado en el directorio *d
 
 1. El pipeline se encuentra en [../.github/workflows/docker-image-desafio-8.yml](../.github/workflows/docker-image-desafio-8.yml)
 2. La imagen construida y subida mediante GitHub Actions se encuentra en [orpimel/desafio_8:v1.0.0](https://hub.docker.com/repository/docker/orpimel/desafio_8)
+
+## Parte 2
+
+### Entregables
+
+1. El entregable de esta práctica será un repo con el código del Dockerfile y el link a la imagen de DockerHub. Así mismo, cualquier otro tipo de archivo secundario para la correcta construcción de la imagen será necesario que lo suban.
+2. Desarrollar un pipeline de CI/CD en GitHubAction que realice el build de la imagen y lo publique a DockerHub.
+
+### Requisitos mínimos
+
+- Algún archivo que sea agregado de forma externa con la opción de utilizar un volumen para almacenarlo.
+- Algún servicio que se pueda acceder de forma remota (como puede ser una base de datos, un servicio web, etc).
+- Se tendrá que poder acceder desde la máquina host donde se ejecute ese contenedor.
+- El tag que utilice la imagen tendrá que seguir algún esquema de versionado y no el tag latest.
+
+### Solución Parte 2 - Entregable No. 1
