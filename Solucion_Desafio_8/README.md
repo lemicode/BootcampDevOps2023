@@ -58,5 +58,5 @@ __Nota:__ el archivo docker-compose.yml se encuentra ubicado en el directorio *d
 
 ## Solución Parte 1 - Entregable No. 2
 
-1. El pipeline se encuentra en [.github/workflows/docker-image-desafio-8.yml](.github/workflows/docker-image-desafio-8.yml)
+1. El pipeline se encuentra en [../.github/workflows/docker-image-desafio-8.yml](../.github/workflows/docker-image-desafio-8.yml)
 2. La imagen construida y subida mediante GitHub Actions se encuentra en [orpimel/desafio_8:v1.0.0](https://hub.docker.com/repository/docker/orpimel/desafio_8)
