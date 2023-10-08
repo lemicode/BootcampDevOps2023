@@ -9,10 +9,10 @@
 
 ### Requisitos mínimos
 
-:white_check_mark: Algún archivo que sea agregado de forma externa con la opción de utilizar un volumen para almacenarlo
-:white_check_mark: Algún servicio que se pueda acceder de forma remota (como puede ser una base de datos, un servicio web, etc
-:white_check_mark: Se tendrá que poder acceder desde la máquina host donde se ejecute ese contenedor.
-:white_check_mark: El tag que utilice la imagen tendrá que seguir algún esquema de versionado y no el tag latest.
+:white_check_mark: Algún archivo que sea agregado de forma externa con la opción de utilizar un volumen para almacenarlo. \n
+:white_check_mark: Algún servicio que se pueda acceder de forma remota (como puede ser una base de datos, un servicio web, etc) \n
+:white_check_mark: Se tendrá que poder acceder desde la máquina host donde se ejecute ese contenedor. \n
+:white_check_mark: El tag que utilice la imagen tendrá que seguir algún esquema de versionado y no el tag latest. \n
 
 ### Solución Parte 1 - Entregable No. 1
 
@@ -82,10 +82,10 @@ __Nota:__ el archivo docker-compose.yml se encuentra ubicado en el directorio *d
 
 ### Requisitos mínimos
 
-:white_check_mark: Tendrá que ser un deployment si o si (no pod, no replica set).
-:white_check_mark: Tendrá que tener algún tipo de volumen o secreto configurado.
-:white_check_mark: Tendrá que ser expuesto fuera del cluster (ClusterIP).
-:white_check_mark: Tendrá que tener entre 3 y 5 réplicas idealmente.
+:white_check_mark: Tendrá que ser un deployment si o si (no pod, no replica set). \n
+:white_check_mark: Tendrá que tener algún tipo de volumen o secreto configurado. \n
+:white_check_mark: Tendrá que ser expuesto fuera del cluster (ClusterIP). \n
+:white_check_mark: Tendrá que tener entre 3 y 5 réplicas idealmente. \n
 :white_check_mark: Tendrá que tener un método de rollback configurado distinto al default.
 
 ### Solución Parte 2 - Entregables No. 1 y No. 2
