@@ -56,14 +56,14 @@ __Nota:__ En el caso de tener inconvenientes donde el sistema mencione algo rela
 
 **Algunos comandos que podrían resultar útiles:**
 
-    - Listar volúmenes: `docker volume ls`.
-    - Eliminar volúmenes: `docker volume rm <nombre del volumen>`.
-    - Eliminar volúmenes no utilizados: `docker volume prune`.
-    - Ver logs de un contenedor: `docker logs <nombre del contenedor>`.
-    - Listar contenedores: `docker ps -a`.
-    - Eliminar una imagen: `docker rmi <nombre de la imagen>`.
-    - Eliminar un contenedor: `docker rm <nombre del contenedor>`.
-    - Listar redes: `docker network ls`.
+- Listar volúmenes: `docker volume ls`.
+- Eliminar volúmenes: `docker volume rm <nombre del volumen>`.
+- Eliminar volúmenes no utilizados: `docker volume prune`.
+- Ver logs de un contenedor: `docker logs <nombre del contenedor>`.
+- Listar contenedores: `docker ps -a`.
+- Eliminar una imagen: `docker rmi <nombre de la imagen>`.
+- Eliminar un contenedor: `docker rm <nombre del contenedor>`.
+- Listar redes: `docker network ls`.
 
 __Nota:__ el archivo docker-compose.yml se encuentra ubicado en el directorio *docker_image*.
 
@@ -82,11 +82,11 @@ __Nota:__ el archivo docker-compose.yml se encuentra ubicado en el directorio *d
 
 ### Requisitos mínimos
 
-:white_check_mark: Tendrá que ser un deployment si o si (no pod, no replica set).
-:white_check_mark: Tendrá que tener algún tipo de volumen o secreto configurado.
-:white_check_mark: Tendrá que ser expuesto fuera del cluster (ClusterIP).
-:white_check_mark: Tendrá que tener entre 3 y 5 réplicas idealmente.
-:white_check_mark: Tendrá que tener un método de rollback configurado distinto al default.
+:white_check_mark: Tendrá que ser un deployment si o si (no pod, no replica set).  
+:white_check_mark: Tendrá que tener algún tipo de volumen o secreto configurado.  
+:white_check_mark: Tendrá que ser expuesto fuera del cluster (ClusterIP).  
+:white_check_mark: Tendrá que tener entre 3 y 5 réplicas idealmente.  
+:white_check_mark: Tendrá que tener un método de rollback configurado distinto al default.  
 
 ### Solución Parte 2 - Entregables No. 1 y No. 2
 
@@ -105,20 +105,20 @@ __Nota:__ el archivo docker-compose.yml se encuentra ubicado en el directorio *d
 
  **Otros comandos que podrían resultar útiles:**
 
-    - Si se requiere eliminar algún recurso se ejecutaría:
-        - `kubectl delete -f ./minikube` (para eliminar todos los recursos).
-        - `kubectl delete -f ./minikube/<archivo.yaml>` (para eliminar un recurso en específico mediante YAML).
-        - `kubectl delete <tipo de objeto> <nombre de objeto>` (para eliminar un recurso en específico).
-    - En el caso que se requiera abordar de manera general la explicación de alguna propiedad contenida en los manifiestos, se puede consultar mediante el comando `kubectl explain <propiedad>`, por ejemplo `kubectl explain service.metadata.name`.
-    - Para validar el estado de los recursos se ejecuta `kubectl get all`.
-    - Para validar el estado de los recursos se ejecuta `kubectl get <tipo de recurso> -o wide` (*-o wide* se emplea para ampliar la información que ofrece por defecto kubectl o *-o yaml* para obtener la información en formato YAML).
-    - Para observar en tiempo real el estado de los pods se ejecuta `kubectl get pod --watch`.
-    - Para obtener logs de un pod se ejecuta `kubectl logs <nombre del pod>`.
-    - Para obtener la descripción de algún recurso se ejecuta `kubectl describe <tipo de recurso> <nombre del recurso>`.
-    - Con `minikube stop` se detiene Minikube .
-    - Con `minikube delete` se elimina todo lo realizado por MiniKube.
-    - Para ingresar a un pod se ejecuta `kubectl exec -it <nombre del pod> -- bash` (con más de un contenedor sería `kubectl exec -it <nombre del pod> -c <nombre del contenedor> -- bash`).
-    - Para observar los eventos de Kubernetes se ejecuta `kubectl get events` (agregar *--watch* para observar en tiempo real).
+- Si se requiere eliminar algún recurso se ejecutaría:
+    - `kubectl delete -f ./minikube` (para eliminar todos los recursos).
+    - `kubectl delete -f ./minikube/<archivo.yaml>` (para eliminar un recurso en específico mediante YAML).
+    - `kubectl delete <tipo de objeto> <nombre de objeto>` (para eliminar un recurso en específico).
+- En el caso que se requiera abordar de manera general la explicación de alguna propiedad contenida en los manifiestos, se puede consultar mediante el comando `kubectl explain <propiedad>`, por ejemplo `kubectl explain service.metadata.name`.
+- Para validar el estado de los recursos se ejecuta `kubectl get all`.
+- Para validar el estado de los recursos se ejecuta `kubectl get <tipo de recurso> -o wide` (*-o wide* se emplea para ampliar la información que ofrece por defecto kubectl o *-o yaml* para obtener la información en formato YAML).
+- Para observar en tiempo real el estado de los pods se ejecuta `kubectl get pod --watch`.
+- Para obtener logs de un pod se ejecuta `kubectl logs <nombre del pod>`.
+- Para obtener la descripción de algún recurso se ejecuta `kubectl describe <tipo de recurso> <nombre del recurso>`.
+- Con `minikube stop` se detiene Minikube .
+- Con `minikube delete` se elimina todo lo realizado por MiniKube.
+- Para ingresar a un pod se ejecuta `kubectl exec -it <nombre del pod> -- bash` (con más de un contenedor sería `kubectl exec -it <nombre del pod> -c <nombre del contenedor> -- bash`).
+- Para observar los eventos de Kubernetes se ejecuta `kubectl get events` (agregar *--watch* para observar en tiempo real).
 
 ## Presentación PDF donde se evidencia la puesta en práctica y el funcionamiento de los ejercicios.
 
