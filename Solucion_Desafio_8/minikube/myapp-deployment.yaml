@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp
+  labels:
+    app: myapp
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+        - image: orpimel/desafio_8:v1.0.0
+          name: myapp          
+          #readinessProbe:
+          #  httpGet:
+          #    path: /
+          #    port: 3000
+          #  initialDelaySeconds: 10
+          #  periodSeconds: 20
+          #livenessProbe:
+          #  tcpSocket:
+          #    port: 3000
+          #  initialDelaySeconds: 30
+          #  periodSeconds: 40
+          ports:
+            - containerPort: 3000
+  strategy:
+    type: RollingUpdate  # Tipo de estrategia de actualización
+    rollingUpdate:
+      maxUnavailable: 1  # Número máximo de pods no disponibles durante la actualización
+      maxSurge: 1  # Número máximo de pods adicionales durante la actualización
