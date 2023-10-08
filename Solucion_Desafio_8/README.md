@@ -9,8 +9,8 @@
 
 ### Requisitos mínimos
 
-:white_check_mark: Algún archivo que sea agregado de forma externa con la opción de utilizar un volumen para almacenarlo.
-:white_check_mark: Algún servicio que se pueda acceder de forma remota (como puede ser una base de datos, un servicio web, etc).
+:white_check_mark: Algún archivo que sea agregado de forma externa con la opción de utilizar un volumen para almacenarlo
+:white_check_mark: Algún servicio que se pueda acceder de forma remota (como puede ser una base de datos, un servicio web, etc
 :white_check_mark: Se tendrá que poder acceder desde la máquina host donde se ejecute ese contenedor.
 :white_check_mark: El tag que utilice la imagen tendrá que seguir algún esquema de versionado y no el tag latest.
 
