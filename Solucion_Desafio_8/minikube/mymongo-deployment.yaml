@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: mongo
+  namespace: desafio8
   labels:
     app: mongo
 spec:
@@ -18,10 +19,16 @@ spec:
         - image: mongo
           name: mongo
           env:
-            - name: MONGO_INITDB_ROOT_PASSWORD
-              value: my_password
             - name: MONGO_INITDB_ROOT_USERNAME
-              value: my_user
+              valueFrom:
+                secretKeyRef:
+                  name: mongo-secret
+                  key: mongo_user
+            - name: MONGO_INITDB_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mongo-secret
+                  key: mongo_password
           volumeMounts:
             - mountPath: /data/db
               name: mongo-data
