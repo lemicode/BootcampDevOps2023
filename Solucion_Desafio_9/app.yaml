@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app-demo
+  namespace: argocd
+spec:
+  source:
+    path: app-demo
+    repoURL: https://github.com/BambooThink/BootcampDevOps2023/tree/main/Solucion_Desafio_9/minikube
+    targetRevision: HEAD
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: kube-system
+  project: default
