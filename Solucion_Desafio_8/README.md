@@ -101,7 +101,7 @@ __Nota:__ el archivo docker-compose.yml se encuentra ubicado en el directorio *d
 
 4. Una vez se creen los recursos **y se estabilicen**, se ejecuta `minikube tunnel` para poder acceder a la aplicación desde el navegador.
 
-5. Finalmente, en un navegador del host anfitrión se valida el funcionamiento de los pods mediante el ingreso a la ruta http://localhost:30000 para listar los registros y http://localhost:30000/crear para generar nuevos registros en la BD.
+5. Finalmente, en un navegador del host anfitrión se valida el funcionamiento de los pods mediante el ingreso a la ruta http://localhost:3000 para listar los registros y http://localhost:3000/crear para generar nuevos registros en la BD.
 
  **Otros comandos que podrían resultar útiles:**
 

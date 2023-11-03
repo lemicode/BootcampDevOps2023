@@ -5,8 +5,8 @@ metadata:
   namespace: argocd
 spec:
   source:
-    path: app-demo
-    repoURL: https://github.com/BambooThink/BootcampDevOps2023/tree/main/Solucion_Desafio_9/minikube
+    path: Solucion_Desafio_9/minikube
+    repoURL: https://github.com/BambooThink/BootcampDevOps2023
     targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc'
