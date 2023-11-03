@@ -11,7 +11,7 @@ Se recomienda el uso de Argo CD pero se pueden utilizar otras herramientas, así
 
 ### Solución
 
-1. Se inicia docker `systemctl --user start docker-desktop`. Luego se inicia sesión en el caso de ser requerido `docker login`.
+1. Se inicializa el servicio *docker-desktop* con el comando `systemctl --user start docker-desktop`, e igualmente se inicia sesión con `docker login`.
 
 ![img-1](img/1.png)
 
