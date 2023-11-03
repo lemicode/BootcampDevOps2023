@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: app-demo
-  namespace: desafio9
+  namespace: argocd
 spec:
   source:
     path: Solucion_Desafio_9/minikube
