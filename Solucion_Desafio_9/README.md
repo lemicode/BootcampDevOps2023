@@ -35,7 +35,7 @@ Se recomienda el uso de Argo CD pero se pueden utilizar otras herramientas, así
 
 ![img-6](img/6.png)
 
-7. Se ejecuta `kubectl apply -f my-app.yaml` para crear la app en Argo CD. Este manifiesto, contiene el namespace **argocd** para que el objeto pueda ser visualizado en la consola de Argo CD. A continuación, se valida su creación mediante el comando `kubectl get apps -n argocd`, y la visualización del proceso en la consola de Argo CD.
+7. Se ejecuta `kubectl apply -f my-app.yaml` para crear la app en Argo CD. Este manifiesto, contiene el namespace **argocd** para que el objeto pueda ser visualizado en la consola de Argo CD. A continuación, se valida su creación mediante el comando `kubectl get apps -n argocd`. Posteriormente, se visualiza el proceso en la consola de Argo CD.
 
 ![img-7](img/7.png)
 
