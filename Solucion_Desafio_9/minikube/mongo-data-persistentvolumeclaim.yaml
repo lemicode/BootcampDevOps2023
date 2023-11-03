@@ -2,7 +2,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: mongo-data
-  namespace: argocd
+  namespace: desafio9
   labels:
     app: mongo-data
 spec:

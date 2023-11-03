@@ -2,11 +2,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: myapp
-  namespace: argocd
+  namespace: desafio9
   labels:
     app: myapp
 spec:
-  replicas: 1
+  replicas: 5
   selector:
     matchLabels:
       app: myapp
