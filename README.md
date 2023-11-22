@@ -17,6 +17,7 @@ El repositorio está organizado de la siguiente manera:
 - [Solución Desafío 7](Solucion_Desafio_7/)
 - [Solución Desafío 8](Solucion_Desafio_8/)
 - [Solución Desafío 9](Solucion_Desafio_9/)
+- [Solución Desafío 10](https://github.com/BambooThink/BootcampDevOps2023/blob/fb1c5bf4729cbc3501b452dbef4b4bb7ef58aa1a/Soluci%C3%B3n%20Desaf%C3%ADo%20DevOps%20No.%2010%20-%20Marco%20Vanegas.pdf)
 
 **Nota:** En relación a los PDFs, es importante dar clic al final de las páginas en el botón __*More Pages*__ para continuar con la lectura del documento.
 
